@@ -13,7 +13,7 @@ const handler = NextAuth({
             async authorize(credentials) {
 
                 const response = await apiServices.login(credentials?.email ?? '', credentials?.password ?? '')
-                // console.log(response);
+                console.log("resssssssssssssspone",response);
                 if (response.message == 'success') {
                     const user = {
                         id: response.user.email,
