@@ -53,7 +53,7 @@ class ApiServices {
 
     //v --------- Auth ---------
     async login(email: string, password: string) {
-        return await fetch(this.#baseURL + "/api/v1/auth/signin", {
+        return await fetch( "https://ecommerce.routemisr.com/api/v1/auth/signin", {
             method: "POST",
             body: JSON.stringify({ email, password }),
             headers: { "Content-Type": "application/json" },
