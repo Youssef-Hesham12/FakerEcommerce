@@ -49,11 +49,11 @@ export default function ProfileForm() {
 
       console.log(response)
 
-      // if (response?.ok) {
-      //   router.push(callbackUrl);
-      // } else {
-      //   alert('Invalid credentials');
-      // }
+      if (response?.ok) {
+        router.push(callbackUrl);
+      } else {
+        alert('Invalid credentials');
+      }
     } catch (error) {
       console.error(error);
       alert('Something went wrong');
