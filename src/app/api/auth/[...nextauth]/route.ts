@@ -11,6 +11,7 @@ const handler = NextAuth({
         password: {},
       },
       async authorize(credentials) {
+        console.log(credentials)
         if (!credentials?.email || !credentials?.password) return null;
 
         const data = await fetch(
@@ -26,6 +27,7 @@ const handler = NextAuth({
         );
 
         const response = await data.json();
+        console.log("ressssssssssssssssssponse",response)
         if (response.message == "success") {
           const user = {
             id: response.user.email,
@@ -60,7 +62,7 @@ const handler = NextAuth({
       return token;
     },
   },
-  secret: process.env.AUTH_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
   
 });
 

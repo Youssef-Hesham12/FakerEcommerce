@@ -13,8 +13,8 @@ export default function ProviderContainer({
   return (
     <SessionProvider>
       <Provider store={store}>
-        {' '}
-        <CartContextProvider>{children}</CartContextProvider>{' '}
+        
+        <CartContextProvider>{children}</CartContextProvider>
       </Provider>
     </SessionProvider>
   );
