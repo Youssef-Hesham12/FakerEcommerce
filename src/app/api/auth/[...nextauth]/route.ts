@@ -25,7 +25,7 @@ const handler = NextAuth({
           }
         );
 
-          const response=await data.json()
+        const response = await data.json();
         if (response.message == "success") {
           const user = {
             id: response.user.email,
@@ -46,8 +46,10 @@ const handler = NextAuth({
   },
   callbacks: {
     async session({ session, token }) {
-      session.user.role = token.role as string;
-      session.token = token.token as string;
+      if (session) {
+        session.user.role = token.role as string;
+        session.token = token.token as string;
+      }
       return session;
     },
     async jwt({ token, user }) {
