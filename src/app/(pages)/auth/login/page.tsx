@@ -47,11 +47,13 @@ export default function ProfileForm() {
         redirect: false,
       });
 
-      if (response?.ok) {
-        router.push(callbackUrl);
-      } else {
-        alert('Invalid credentials');
-      }
+      console.log(response)
+
+      // if (response?.ok) {
+      //   router.push(callbackUrl);
+      // } else {
+      //   alert('Invalid credentials');
+      // }
     } catch (error) {
       console.error(error);
       alert('Something went wrong');

@@ -47,7 +47,7 @@ const handler = NextAuth({
             }
             return token
         }
-    },
+    },                  
     secret: process.env.AUTH_SECRET,
     session: {
         strategy: 'jwt'
