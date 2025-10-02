@@ -50,7 +50,7 @@ export default function ProfileForm() {
       console.log(response)
 
       if (response?.ok) {
-        router.push("/");
+        router.replace("/");
       } else {
         alert('Invalid credentials');
       }
