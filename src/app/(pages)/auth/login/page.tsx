@@ -50,7 +50,7 @@ export default function ProfileForm() {
       console.log(response)
 
       if (response?.ok) {
-        router.push("/cart");
+        router.push("/");
       } else {
         alert('Invalid credentials');
       }
